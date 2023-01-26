@@ -1,8 +1,9 @@
+import { DefaultButton, Searchbar } from "./styles";
 export default function SearchBar(props) {
    return (
       <div>
-         <input type='search' />
-      <button onClick={() => (props.onSearch('un id'))}>Agregar</button>
+         <Searchbar type='search' />
+      <DefaultButton onClick={() => (props.onSearch('un id'))}>Agregar</DefaultButton>
       </div>
    );
 }

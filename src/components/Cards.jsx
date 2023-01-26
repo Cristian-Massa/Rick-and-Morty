@@ -1,8 +1,9 @@
 import Card from './Card';
+import { DivApp } from './styles';
 
 export default function Cards(props) {
    const { characters } = props;
-   return (<div> 
+   return (<DivApp> 
       {characters.map((character) => (<Card key={character.name}
       name ={character.name}
       species ={character.species}
@@ -10,5 +11,5 @@ export default function Cards(props) {
       image ={character.image}
       onClose ={() => window.alert('Emulamos que se cierra la card')}
       />))}
-   </div>);
+   </DivApp>);
 }
