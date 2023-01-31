@@ -1,4 +1,5 @@
-import { DefaultButton, Searchbar } from "./styles";
+import { DefaultButton } from "../Generalstyles";
+import { Searchbar } from "./Nav/NavStyles";
 export default function SearchBar(props) {
    return (
       <div>

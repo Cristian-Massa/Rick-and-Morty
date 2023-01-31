@@ -1,4 +1,5 @@
-import { DefaultButton, DivCard, ImgCard } from "./styles";
+import { DefaultButton } from "../Generalstyles";
+import { DivCard, ImgCard } from "./CardsStyles";
 
 export default function Card(props) {
    return (
