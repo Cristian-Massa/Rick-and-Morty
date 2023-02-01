@@ -11,6 +11,8 @@ export const CardDiv = styled.div`
     display:flex;
     gap: 10px;
     overflow: hidden;
+    flex-wrap: wrap;
+
 
 `
 
@@ -21,6 +23,7 @@ export const DefaultButton = styled.button`
     border: none;
     justify-self: end;
     padding: 1%;
+    transition: background 0.5s ;
 
     &:hover{
         background-color:#F0B27A;

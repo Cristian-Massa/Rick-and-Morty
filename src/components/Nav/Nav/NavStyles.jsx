@@ -18,6 +18,7 @@ export const NavDiv = styled.nav`
     background-color: #aabfd1;
     border-bottom: 2px solid #F1C40F;
     padding: 1rem;
+    
 `
 
 export const NavImg = styled.img`

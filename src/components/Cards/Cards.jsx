@@ -1,15 +1,21 @@
 import Card from './Card';
-import { CardDiv, DivApp } from '../Generalstyles';
+import { CardDiv } from '../Generalstyles';
 
 export default function Cards(props) {
    const { characters } = props;
-   return (<CardDiv> 
-      {characters.map((character) => (<Card key={character.name}
-      name ={character.name}
-      species ={character.species}
-      gender ={character.gender}
-      image ={character.image}
-      onClose ={() => window.alert('Emulamos que se cierra la card')}
-      />))}
-   </CardDiv>);
+   let i = 0;
+   return (
+     <CardDiv>
+       {characters.map((e) => (
+         <Card
+           name={e.name}
+           species={e.species}
+           gender={e.gender}
+           image={e.image}
+           onClose={() => props.onClose(e.id)}
+           key={i++}
+         />
+       ))}
+     </CardDiv>
+   );
 }
