@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const ImgCard = styled.img`
 width: 150px;
-border: solid black 2px;
+border: solid #F1C40F 2px;
 
 `
 
@@ -21,3 +21,8 @@ transition: transform 1s;
     background: linear-gradient(0deg, rgba(36,22,0,0.26094187675070024) 0%, rgba(121,75,9,0.7371323529411764) 35%, rgba(255,214,0,0.8379726890756303) 100%);
  }
 `
+
+export const Title = styled.h1`
+ text-align: center;
+`
+

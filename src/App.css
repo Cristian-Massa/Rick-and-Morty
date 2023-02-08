@@ -1,10 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round&display=swap');
+
 .App {
    text-align: center;
 }
+
 body{
-   background-image: url('https://www.denofgeek.com/wp-content/uploads/2020/04/Rick-and-Morty-Zoom-Backgrounds-Garage-1.png?fit=1920%2C1080');
+   background-image: url('https://www.teahub.io/photos/full/193-1938948_hd-rick-and-morty-wallpaper.jpg');
    background-repeat: no-repeat;
    background-attachment: fixed;
    height: 100%;
+   overflow-x: hidden;
+   color: aliceblue;
+   font-family: 'Crete Round', serif;
+   scrollbar-color: rgba(0, 0, 0, .5) rgba(0, 0, 0, 0);
+   scrollbar-width: thin;
 }
-
