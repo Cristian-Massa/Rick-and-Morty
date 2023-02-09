@@ -45,7 +45,7 @@ export default function Detail(props) {
     return (
         <DivDetail>
             <ModalDiv>
-                <Link to={`/`} >
+                <Link to={`/home`} >
                     <DefaultButton>x</DefaultButton>
                 </Link>
                 <p> Nombre: {character.name}</p>

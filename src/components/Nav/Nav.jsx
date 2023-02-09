@@ -1,12 +1,13 @@
 import React from "react";
-import { Links, MenuItem, NavAll, NavDiv, NavImg, SpreadButton, StyledLink } from "./Nav/NavStyles";
-import { Link, NavLink } from "react-router-dom";
+import { NavAll, NavDiv, NavImg, StyledLink } from "./Nav/NavStyles";
+
 import { NavUl } from "../Generalstyles";
 import SearchBar from "./SearchBar";
 
 
 export default function Nav(props) {
     {
+        console.log()
         return (
             <NavAll>
                 <NavDiv>
@@ -21,7 +22,7 @@ export default function Nav(props) {
                             </StyledLink>
                         </li>
                         <li>
-                            <StyledLink exact to='/'>
+                            <StyledLink exact to='/' onClick={() =>(props.setAccess(0))}>
                                 <p>Log out</p>
                             </StyledLink>
                         </li>
