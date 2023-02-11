@@ -1,26 +1,28 @@
 import React, { useState } from "react";
 import { DefaultButton, ModalDiv } from "../Generalstyles";
 export default function Login( props ) {
-
     const [userData, setUserData] = useState({username: '', password: ''})
-
+    const [ errors, setErrors] = useState({username: '', password: ''})
+    
     const handleInputChange = (e) =>{
         setUserData(
             {...userData,
                 [e.target.name]: e.target.value
             }
-        )
+            )
     }
-    const handleSubmit = (e) =>{
-        e.preventDefault()
-        props.login(userData)
-    }
-    const [ errors, setErrors] = useState({username: '', password: ''})
 
     const handleError = (e) =>{
         
     }
+    
+    const handleSubmit = (e) =>{
+    console.log(props.login)
+    e.preventDefault()
+    props.login(userData)
+}
 
+    
     return (
         <div>
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Rick_and_Morty.svg/1200px-Rick_and_Morty.svg.png" alt="logo" width='500px' />

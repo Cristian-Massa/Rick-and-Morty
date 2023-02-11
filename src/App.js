@@ -4,12 +4,31 @@ import Cards from './components/Cards/Cards'
 import About from './components/About/About'
 //import characters, { Rick } from './data.js'
 import { DivApp } from './components/Generalstyles'
-import { useState } from 'react'
-import { Route, Routes } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import { Route, Routes, useNavigate } from 'react-router-dom'
 import Detail from './components/Detail/Detail'
+import Login from './components/Login/Login'
 
 
 function App() {
+  
+  const navigate = useNavigate();
+  const [access, setAccess] = useState(0);
+  const username = 'cristianmassa30@gmail.com';
+  const password = '123456';
+  
+  function login(userData) {
+     if (userData.password === password && userData.username === username) {
+        setAccess(1);
+        navigate('/home');
+        console.log(access);
+     }
+  }
+  useEffect(() =>{
+    !access && navigate('/')
+    console.log(access);
+  }, [access])
+
 
   const [characters, setCharacters] = useState([])
 
@@ -40,9 +59,10 @@ function App() {
 
   return (
     <DivApp>
-      <Nav
-        onSearch={onSearch} random={random} />
+      { access === 1 ? <Nav
+        onSearch={onSearch} random={random} />: null}
       <Routes>
+        <Route exact path='/' element={<Login login={login}/>}/>
         <Route path='/home' element={
           <Cards
             characters={characters} onClose={onClose}
