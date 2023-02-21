@@ -25,7 +25,7 @@ export const ModalDiv = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1.3);
-    padding: 5%;
+    padding: 100px;
     backdrop-blur: 10px;
     box-shadow: 10px;
     box-shadow: 0px 6px 22px -1px rgba(0,0,0,1);
@@ -58,4 +58,9 @@ export const NavUl = styled.ul`
 export const styledLi = styled.li`
 color: white;
 text-decoration: none;
+`
+
+export const Invisiblebtn = styled.button`
+    background-color: transparent;
+    border: none;
 `

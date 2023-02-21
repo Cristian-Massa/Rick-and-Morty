@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react'
 import { Route, Routes, useNavigate } from 'react-router-dom'
 import Detail from './components/Detail/Detail'
 import Login from './components/Login/Login'
-
+import Favorites from './components/MyFavorites/MyFavorites'
 
 function App() {
   
@@ -69,6 +69,7 @@ function App() {
           />} />
         <Route path='/About' element={<About />}/>
         <Route path='/detail/:detailId' element={<Detail />}/>
+        <Route path='/MyFavorites' element={<Favorites />}/>
       </Routes>
     </DivApp >
   )

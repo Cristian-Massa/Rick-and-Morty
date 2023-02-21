@@ -26,6 +26,11 @@ export default function Nav(props) {
                                 <p>Log out</p>
                             </StyledLink>
                         </li>
+                        <li>
+                            <StyledLink to='/MyFavorites'>
+                                <p>Favorites</p>
+                            </StyledLink>
+                        </li>
                     </NavUl>
                     <SearchBar onSearch={props.onSearch} random={props.random} />
                 </NavDiv>

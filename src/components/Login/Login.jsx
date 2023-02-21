@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { DefaultButton, ModalDiv } from "../Generalstyles";
+import { validation } from "./Validation";
 export default function Login( props ) {
     const [userData, setUserData] = useState({username: '', password: ''})
     const [ errors, setErrors] = useState({username: '', password: ''})
@@ -12,12 +13,8 @@ export default function Login( props ) {
             )
     }
 
-    const handleError = (e) =>{
-        
-    }
-    
+
     const handleSubmit = (e) =>{
-    console.log(props.login)
     e.preventDefault()
     props.login(userData)
 }
